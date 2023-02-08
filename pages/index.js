@@ -1,11 +1,11 @@
 import Head from 'next/head'
 import courses from '../database'
-import styles, { Logo, Navigation, SubLogo, ButtonContainerNavigation, NavigationButton, MainContainer, ContentContainer, Conteudo, FooterContainer, FooterText, AbaCart, Products, TextProducts, BuyProducts, DescriptionProducts, PriceProducts, AbaTitle, OpeningAndClosing, SelectedItems, Items, ItemsTitle } from '@/styles/style.jsx'
+import styles, { Logo, Navigation, SubLogo, ButtonContainerNavigation, NavigationButton, MainContainer, ContentContainer, Conteudo, FooterContainer, FooterText, AbaCart, Products, TextProducts, BuyProducts, DescriptionProducts, PriceProducts, AbaTitle, OpeningAndClosing, SelectedItems, Items, ItemsTitle, CheckoutButton, CheckoutContainer, TotalPurchase, Value, Button, Price } from '@/styles/style.jsx'
 import styled from 'styled-components'
 import { GlobalStyle } from '@/styles/globalStyle'
-import { IconName, FaCcVisa, FaCartPlus, FaToggleOn, FaAngleDoubleRight } from "react-icons/fa";
-import { BsAlarm, MdLocalAtm, BsGrid3X2GapFill, VscAccount } from "react-icons/bs";
+import { FaCcVisa, FaCartPlus, FaToggleOn, FaAngleDoubleRight } from "react-icons/fa";
 import dynamic from 'next/dynamic'
+import 'boxicons'
 
 const Home = () => {
   return (
@@ -66,16 +66,35 @@ const Home = () => {
           </OpeningAndClosing>
         </AbaTitle>
 
+        <CheckoutContainer>
+
+          <CheckoutButton>
+            Finalizar Compra
+          </CheckoutButton>
+        </CheckoutContainer>
+
+        <TotalPurchase>
+          <Value>
+            TOTAL: R$750
+          </Value>
+        </TotalPurchase>
+        
+        
+
         <SelectedItems>
           <Items />
           <ItemsTitle>
             Apple Watch Series 4 GPS
+            <Button>-</Button>
+            <span>2</span>
+            <Button>+</Button>
+            <Price>R$595</Price>
           </ItemsTitle>
         </SelectedItems>
-
-        <SelectedItems />
-        <SelectedItems />
+        
       </AbaCart>
+
+      
 
       <FooterContainer>
         <FooterText>

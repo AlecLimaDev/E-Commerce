@@ -139,9 +139,9 @@ export const FooterText = styled.p`
 
 export const AbaCart = styled.div`
     position: absolute;
-    width: 35%;
+    width: 33%;
     height: 100%;
-    left: 954px;
+    left: 72%;
     top: 0px;
     background: #0F52BA;
     box-shadow: -5px 0px 6px rgba(0, 0, 0, 0.13);
@@ -168,7 +168,7 @@ export const OpeningAndClosing = styled.div`
     cursor: pointer;
 `
 
-export const SelectedItems = styled.div`
+export const SelectedItems = styled.table`
     width: 68%;
     height: 95px;
     background-color: #FFFFFF;
@@ -182,14 +182,72 @@ export const SelectedItems = styled.div`
     justify-content: space-evenly;
 `
 
-export const Items = styled.div`
+export const Items = styled.tbody`
     width: 46px;
     height: 57px;
     background: #000;
-    margin-left: 23px;
+    margin-left: 5px;
 `
 
-export const ItemsTitle = styled.h1`
+export const ItemsTitle = styled.tr`
     font-weight: 400;
     font-size: 13px;
+    display: flex;
+    gap: 5px;
+    flex-flow: row wrap;
 `
+
+export const Button = styled.button`
+    padding: 0 5px;
+    border: none;
+    cursor: pointer;
+    background: #ddd;
+    
+    
+    &:hover {
+        background-color: aliceblue;
+    }
+`
+
+export const Price = styled.span`
+font-weight: bold;
+font-size: 17px;
+font-family: sans-serif;
+`
+
+export const CheckoutContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    width: 100%;
+    height: 97px;
+    top: 95%;
+    position: absolute;
+`
+
+export const TotalPurchase = styled.div`
+    display: inline-flex;
+    position: absolute;
+    bottom: 71px;
+    transform: translate(-120%, 50%);
+    gap: 42px;
+    
+`
+
+export const Value = styled.h1`
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    gap: 30px
+`
+
+
+
+ export const CheckoutButton = styled.h1`
+    font-weight: 700;
+    font-size: 28px;
+    color: #FFF;
+    margin-right: 53px;
+` 

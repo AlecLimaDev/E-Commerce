@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@next/font": "13.1.5",
+    "boxicons": "^2.1.4",
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.5",
     "icons": "^1.0.0",
