@@ -124,10 +124,10 @@ export const BuyProducts = styled.button`
 
 export const FooterContainer = styled.div`
     max-width: 100%;
-    height: 34px;
+    height: 7vh;
     background: #EEEEEE;
     display: flex;
-    margin-top: 6%;
+    margin-top: 8%;
     align-items: center;
 `
 
@@ -169,12 +169,12 @@ export const OpeningAndClosing = styled.div`
 `
 
 export const SelectedItems = styled.table`
-    width: 68%;
+    width: 74%;
     height: 95px;
     background-color: #FFFFFF;
     box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.05);
     border-radius: 8px;
-    transform: translate(8%, 50%);  
+    transform: translate(3%, 66%);  
     margin-top: 28px;
      margin-left: 17px;   
     display: inline-flex;
@@ -190,22 +190,32 @@ export const Items = styled.tbody`
 `
 
 export const ItemsTitle = styled.tr`
-    font-weight: 400;
+    font-weight: 700;
     font-size: 13px;
-    display: flex;
-    gap: 5px;
+    font-family: sans-serif;
+    /* display: flex; */
+    /* gap: 5px; */
     flex-flow: row wrap;
 `
 
 export const Button = styled.button`
-    padding: 0 5px;
     border: none;
     cursor: pointer;
-    background: #ddd;
-    
+    background-color: #ddd;
     
     &:hover {
         background-color: aliceblue;
+    }
+`
+
+export const ButtonRemove = styled.button`
+    border: none;
+    cursor: pointer;
+    background: none;
+
+    &:hover {
+        background-color: red;
+        border-radius: 100%;
     }
 `
 
