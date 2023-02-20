@@ -1,66 +1,64 @@
+import {
+  AbaCart,
+  AbaTitle,
+  OpeningAndClosing,
+  CheckoutContainer,
+  CheckoutButton,
+  TotalPurchase,
+  Value,
+  SelectedItems,
+  Items,
+  ItemsTitle,
+  Button,
+  Price,
+  ButtonRemove,
+} from "../styles/style";
+
+import { FaAngleDoubleRight } from "react-icons/fa";
 
 import {
-    AbaCart,
-    AbaTitle,
-    OpeningAndClosing,
-    CheckoutContainer,
-    CheckoutButton,
-    TotalPurchase,
-    Value,
-    SelectedItems,
-    Items,
-    ItemsTitle,
-    Button,
-    Price,
-    ButtonRemove
-} from '@/styles/style'
+  AiFillCloseCircle,
+  AiOutlineMinus,
+  AiOutlinePlus,
+} from "react-icons/ai";
 
-import { FaAngleDoubleRight } from 'react-icons/fa'
+const CartShopping: React.FC = () => {
+  return (
+    <div>
+      <AbaCart>
+        <AbaTitle>
+          Carrinho de compras
+          <OpeningAndClosing>
+            <FaAngleDoubleRight />
+          </OpeningAndClosing>
+        </AbaTitle>
 
-import React from 'react'
+        <CheckoutContainer>
+          <CheckoutButton>Finalizar Compra</CheckoutButton>
+        </CheckoutContainer>
 
-const CartShopping = () => {
-    return (
-        <div>
-            <AbaCart>
-                <AbaTitle>
-                    Carrinho de compras
-                    <OpeningAndClosing>
-                        <FaAngleDoubleRight />
-                    </OpeningAndClosing>
-                </AbaTitle>
+        <TotalPurchase>
+          <Value>TOTAL: R$750</Value>
+        </TotalPurchase>
 
-                <CheckoutContainer>
+        <SelectedItems>
+          <Items />
+          <ItemsTitle>Apple Watch Series 4 GPS sahusa</ItemsTitle>
+          <Button>
+            <AiOutlineMinus />
+          </Button>
+          <span>2</span>
+          <Button>
+            <AiOutlinePlus />
+          </Button>
+          <Price>R$595</Price>
+          <ButtonRemove>
+            <AiFillCloseCircle />
+          </ButtonRemove>
+        </SelectedItems>
+      </AbaCart>
+    </div>
+  );
+};
 
-                    <CheckoutButton>
-                        Finalizar Compra
-                    </CheckoutButton>
-                </CheckoutContainer>
-
-                <TotalPurchase>
-                    <Value>
-                        TOTAL: R$750
-                    </Value>
-                </TotalPurchase>
-
-
-
-                <SelectedItems>
-                    <Items />
-                    <ItemsTitle>
-                        Apple Watch Series 4 GPS sahusa
-                    </ItemsTitle>
-                    <Button><box-icon name='minus'></box-icon></Button>
-                    <span>2</span>
-                    <Button><box-icon name='plus'></box-icon></Button>
-                    <Price>R$595</Price>
-                    <ButtonRemove><box-icon type='solid' name='x-circle'></box-icon></ButtonRemove>
-
-                </SelectedItems>
-
-            </AbaCart>
-        </div>
-    )
-}
-
-export default CartShopping
+export default CartShopping;

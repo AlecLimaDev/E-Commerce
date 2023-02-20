@@ -8,13 +8,13 @@ import {
     PriceProducts,
     DescriptionProducts,
     BuyProducts
-} from '@/styles/style'
+} from '../styles/style'
 
 import { FaCcVisa } from 'react-icons/fa'
 
 
 
-const Main = () => {
+const Main: React.FC = () => {
     return (
         <>
             <MainContainer>

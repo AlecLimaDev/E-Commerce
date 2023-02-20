@@ -1,6 +1,6 @@
-import { FooterContainer, FooterText } from '@/styles/style'
+import { FooterContainer, FooterText } from '../styles/style'
 import React from 'react'
-const Footer = () => {
+const Footer: React.FC = () => {
     return (
         <>
             <FooterContainer>

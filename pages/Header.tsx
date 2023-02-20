@@ -4,13 +4,13 @@ import {
     SubLogo,
     ButtonContainerNavigation,
     NavigationButton,
-} from '@/styles/style'
+} from '../styles/style'
 
 import { FaCartPlus } from "react-icons/fa";
 
 
 
-const Header = () => {
+const Header: React.FC = () => {
     return (
         <>
             <Navigation>
