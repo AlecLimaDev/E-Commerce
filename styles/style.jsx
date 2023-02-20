@@ -169,17 +169,17 @@ export const OpeningAndClosing = styled.div`
 `
 
 export const SelectedItems = styled.table`
-    width: 74%;
+    width: 83%;
     height: 95px;
     background-color: #FFFFFF;
     box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.05);
     border-radius: 8px;
-    transform: translate(3%, 66%);  
+    transform: translate(1%, 66%);  
     margin-top: 28px;
-     margin-left: 17px;   
     display: inline-flex;
     align-items: center;
     justify-content: space-evenly;
+    flex: row wrap;
 `
 
 export const Items = styled.tbody`
@@ -193,8 +193,6 @@ export const ItemsTitle = styled.tr`
     font-weight: 700;
     font-size: 13px;
     font-family: sans-serif;
-    /* display: flex; */
-    /* gap: 5px; */
     flex-flow: row wrap;
 `
 
@@ -202,7 +200,8 @@ export const Button = styled.button`
     border: none;
     cursor: pointer;
     background-color: #ddd;
-    
+    border-radius: 80%;
+    padding: 2px;
     &:hover {
         background-color: aliceblue;
     }
@@ -212,10 +211,11 @@ export const ButtonRemove = styled.button`
     border: none;
     cursor: pointer;
     background: none;
+    border-radius: 80%;
+    padding: 2px;
 
     &:hover {
         background-color: red;
-        border-radius: 100%;
     }
 `
 
@@ -239,9 +239,10 @@ export const CheckoutContainer = styled.div`
 export const TotalPurchase = styled.div`
     display: inline-flex;
     position: absolute;
-    bottom: 71px;
-    transform: translate(-120%, 50%);
-    gap: 42px;
+    bottom: 7%;
+    left: 34%;
+    /* transform: translate(-120%, 50%); */
+    /* gap: 42px; */
     
 `
 
@@ -249,8 +250,8 @@ export const Value = styled.h1`
     color: white;
     font-size: 20px;
     font-weight: 700;
-    display: flex;
-    gap: 30px
+   
+    text-align: center;
 `
 
 
@@ -259,5 +260,6 @@ export const Value = styled.h1`
     font-weight: 700;
     font-size: 28px;
     color: #FFF;
-    margin-right: 53px;
+    /* margin-right: 53px; */
+    text-align: center;
 ` 

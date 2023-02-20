@@ -1,3 +1,6 @@
+import { useState, useEffect } from "react";
+import {api} from '../src/services/api'
+
 import {
   AbaCart,
   AbaTitle,
@@ -22,7 +25,15 @@ import {
   AiOutlinePlus,
 } from "react-icons/ai";
 
+
 const CartShopping: React.FC = () => {
+
+  const [cart, setCart] = useState([1,2,3])
+
+  useEffect(() => {
+    api.get('/cart').then((data) => console.log(data))
+  }, [])
+
   return (
     <div>
       <AbaCart>
@@ -45,15 +56,15 @@ const CartShopping: React.FC = () => {
           <Items />
           <ItemsTitle>Apple Watch Series 4 GPS sahusa</ItemsTitle>
           <Button>
-            <AiOutlineMinus />
+            <AiOutlineMinus style={{ display: 'flex' }} />
           </Button>
           <span>2</span>
           <Button>
-            <AiOutlinePlus />
+            <AiOutlinePlus style={{ display: 'flex' }} />
           </Button>
           <Price>R$595</Price>
           <ButtonRemove>
-            <AiFillCloseCircle />
+            <AiFillCloseCircle style={{ display: 'flex' }} />
           </ButtonRemove>
         </SelectedItems>
       </AbaCart>

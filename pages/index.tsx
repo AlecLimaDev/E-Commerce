@@ -7,7 +7,7 @@ import CartShopping from './CartShopping'
 import Footer from './Footer'
 
 
-const DynamicHeader = dynamic(() => import('../pages/index'), {
+const DynamicHeader = dynamic(() => import('./index'), {
   ssr: false,
 })
 
