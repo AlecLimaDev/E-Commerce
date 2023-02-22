@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react";
-import {api} from '../src/services/api'
 
 import {
   AbaCart,
@@ -21,18 +19,13 @@ import { FaAngleDoubleRight } from "react-icons/fa";
 
 import {
   AiFillCloseCircle,
+  AiFillDatabase,
   AiOutlineMinus,
   AiOutlinePlus,
 } from "react-icons/ai";
 
 
-const CartShopping: React.FC = () => {
-
-  const [cart, setCart] = useState([1,2,3])
-
-  useEffect(() => {
-    api.get('/cart').then((data) => console.log(data))
-  }, [])
+const CartShopping = ({data}) => {
 
   return (
     <div>
@@ -52,19 +45,19 @@ const CartShopping: React.FC = () => {
           <Value>TOTAL: R$750</Value>
         </TotalPurchase>
 
-        <SelectedItems>
+        <SelectedItems data={data}>
           <Items />
           <ItemsTitle>Apple Watch Series 4 GPS sahusa</ItemsTitle>
           <Button>
-            <AiOutlineMinus style={{ display: 'flex' }} />
+            <AiOutlineMinus style={{ display: "flex" }} />
           </Button>
           <span>2</span>
           <Button>
-            <AiOutlinePlus style={{ display: 'flex' }} />
+            <AiOutlinePlus style={{ display: "flex" }} />
           </Button>
           <Price>R$595</Price>
           <ButtonRemove>
-            <AiFillCloseCircle style={{ display: 'flex' }} />
+            <AiFillCloseCircle style={{ display: "flex" }} />
           </ButtonRemove>
         </SelectedItems>
       </AbaCart>

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { FunctionComponent, ReactNode } from "react";
 
 export const Navigation = styled.nav`
     height: 75px;
@@ -168,7 +169,13 @@ export const OpeningAndClosing = styled.div`
     cursor: pointer;
 `
 
-export const SelectedItems = styled.table`
+interface PropsItems {
+    data?: any;
+    name?: String;
+    children?: ReactNode;
+}
+
+export const SelectedItems:FunctionComponent<PropsItems> = styled.table`
     width: 83%;
     height: 95px;
     background-color: #FFFFFF;
@@ -180,6 +187,7 @@ export const SelectedItems = styled.table`
     align-items: center;
     justify-content: space-evenly;
     flex: row wrap;
+
 `
 
 export const Items = styled.tbody`
