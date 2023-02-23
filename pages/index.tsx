@@ -8,11 +8,7 @@ import { useState, useEffect } from "react";
 import { api } from "../src/services/api";
 import { SelectedItems } from "../styles/style";
 
-
-
-
-
-const Home = () => {
+const Home: React.FC = () => {
   const productObject = {
     name: "produto",
     category: "categoria",
@@ -22,7 +18,7 @@ const Home = () => {
 
   const [cart, setCart] = useState([]);
 
-  const fetchData = async () => {
+  const fetchData = () => {
     api.get("/cart").then((response) => setCart(response.data));
   };
 
@@ -46,10 +42,10 @@ const Home = () => {
       <GlobalStyle />
       <Header />
       <Main />
-      <CartShopping data='data' />
+      <CartShopping data="data" />
       <button onClick={handleAddItem}>TESTANDO</button>
       {cart.map((item, data) => {
-        <SelectedItems data={data} />
+        <SelectedItems data={data} />;
       })}
       <Footer />
     </>
