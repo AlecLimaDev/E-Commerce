@@ -5,6 +5,4 @@ export default function App({ Component, pageProps }) {
 }
 
 
-const DynamicHeader = dynamic(() => import("./_app"), {
-  ssr: false,
-});
+

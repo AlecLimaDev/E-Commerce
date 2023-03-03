@@ -5,8 +5,8 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat'
-    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
 }
 
 body, html { 

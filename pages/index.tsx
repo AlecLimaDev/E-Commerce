@@ -1,52 +1,39 @@
-import React from "react";
+/* eslint-disable react/jsx-key */
+import React, { FunctionComponent, useEffect, useState } from "react";
 import { GlobalStyle } from "../styles/globalstyle";
-import Header from "./Header";
-import Main from "./Main";
-import CartShopping from "./CartShopping";
+const Header = dynamic(() => import("./Header"), {
+  ssr: false,
+});
+const Main = dynamic(() => import("./Main"), {
+  ssr: false,
+});
+
+const CartShopping = dynamic(() => import("./CartShopping"), {
+  ssr: false,
+});
+
+import dynamic from "next/dynamic";
 import Footer from "./Footer";
-import { useState, useEffect } from "react";
-import { api } from "../src/services/api";
-import { SelectedItems } from "../styles/style";
+import { Global } from "../src/interface/Global";
 
-const Home: React.FC = () => {
-  const productObject = {
-    name: "produto",
-    category: "categoria",
-    price: 100,
-    qtd: 1,
-  };
 
-  const [cart, setCart] = useState([]);
-
-  const fetchData = () => {
-    api.get("/cart").then((response) => setCart(response.data));
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const handleAddItem = () => {
-    console.log("Disparou handleAddItem");
-
-    api.post("/cart", productObject).then((response) => console.log(response));
-    fetchData();
-  };
-
-  const hanleRemoveItem = () => {};
-
-  const hanleUpdateItem = () => {};
-
+const Home: React.FC<Global> = ({
+  item,
+  handleAddItem,
+  cartTotal,
+  produtos,
+}) => {
   return (
     <>
       <GlobalStyle />
       <Header />
-      <Main />
-      <CartShopping data="data" />
-      <button onClick={handleAddItem}>TESTANDO</button>
-      {cart.map((item, data) => {
-        <SelectedItems data={data} />;
-      })}
+        <Main
+        description={undefined}
+        total={cartTotal}  
+      />
+      <CartShopping
+        item={item}
+      />
       <Footer />
     </>
   );

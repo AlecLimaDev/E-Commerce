@@ -1,4 +1,6 @@
-
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable react/no-children-prop */
+/* eslint-disable react/jsx-key */
 import {
   AbaCart,
   AbaTitle,
@@ -19,13 +21,19 @@ import { FaAngleDoubleRight } from "react-icons/fa";
 
 import {
   AiFillCloseCircle,
-  AiFillDatabase,
   AiOutlineMinus,
   AiOutlinePlus,
 } from "react-icons/ai";
+import { useState } from "react";
+import Main from "./Main";
 
+interface CartShoppingProps {
+  item: any;
+  calculo?: string | number
+}
 
-const CartShopping = ({data}) => {
+const CartShopping = (props) => {
+  const [shoppingCart, setShoppingCart] = useState<any>([])
 
   return (
     <div>
@@ -42,21 +50,29 @@ const CartShopping = ({data}) => {
         </CheckoutContainer>
 
         <TotalPurchase>
-          <Value>TOTAL: R$750</Value>
+          <Value></Value>
         </TotalPurchase>
 
-        <SelectedItems data={data}>
-          <Items />
-          <ItemsTitle>Apple Watch Series 4 GPS sahusa</ItemsTitle>
-          <Button>
+        <SelectedItems>
+          <Items>
+            <img src="https://picsum.photos/46/57" alt="foto" />
+          </Items>
+          <ItemsTitle> </ItemsTitle>
+          <Button
+            
+          >
             <AiOutlineMinus style={{ display: "flex" }} />
           </Button>
-          <span>2</span>
-          <Button>
+          <span>15 </span>
+          <Button
+            onClick={() => null}
+          >
             <AiOutlinePlus style={{ display: "flex" }} />
           </Button>
-          <Price>R$595</Price>
-          <ButtonRemove>
+          <Price>R$ </Price>
+          <ButtonRemove
+            onClick={() => null}
+          >
             <AiFillCloseCircle style={{ display: "flex" }} />
           </ButtonRemove>
         </SelectedItems>
