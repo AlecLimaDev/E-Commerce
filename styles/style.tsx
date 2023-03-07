@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 import React, { FunctionComponent, ReactNode } from "react";
-import { Global } from "../src/interface/Global";
 
 export const Navigation = styled.nav`
   height: 75px;
@@ -38,9 +37,6 @@ export const NavigationButton = styled.button`
   height: 52px;
   background-color: azure;
 `;
-
-
-
 
 export const MainContainer:React.FC<Props> = styled.main`
   display: flex;
@@ -97,6 +93,12 @@ export const Products = styled.div`
   position: sticky;
   display: flex;
   align-items: center;
+
+
+  img {
+    width: 120px;
+    height: 140px;
+  }
 `;
 
 export const TextProducts = styled.h3`
@@ -160,6 +162,12 @@ export const AbaCart: FunctionComponent<AbaCartProps> = styled.div`
   top: 0px;
   background: #0f52ba;
   box-shadow: -5px 0px 6px rgba(0, 0, 0, 0.13);
+  
+  .active {
+    background: none;
+  }
+
+
 `;
 
 export const AbaTitle = styled.h1`
@@ -210,8 +218,13 @@ interface ItemsProp {
 export const Items: FunctionComponent<ItemsProp> = styled.div`
   width: 46px;
   height: 57px;
-  background: #000;
+  /* background: #000; */
   margin-left: 5px;
+
+img {
+  width: 46px;
+  height: 57px;
+  }
 `;
 
 
@@ -297,3 +310,5 @@ export const CheckoutButton = styled.h1`
   color: #fff;
   text-align: center;
 `;
+
+

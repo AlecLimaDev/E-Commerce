@@ -1,42 +1,30 @@
 /* eslint-disable react/jsx-key */
-import React, { FunctionComponent, useEffect, useState } from "react";
+import React, { useState } from "react";
 import { GlobalStyle } from "../styles/globalstyle";
-const Header = dynamic(() => import("./Header"), {
-  ssr: false,
-});
-const Main = dynamic(() => import("./Main"), {
+const Header = dynamic(() => import("../src/components/Header"), {
   ssr: false,
 });
 
-const CartShopping = dynamic(() => import("./CartShopping"), {
+const CartShopping = dynamic(() => import("../src/components/CartShopping"), {
   ssr: false,
 });
 
 import dynamic from "next/dynamic";
-import Footer from "./Footer";
-import { Global } from "../src/interface/Global";
+import Main from "../src/components/Main";
+import Footer from "../src/components/Footer";
 
 
-const Home: React.FC<Global> = ({
-  item,
-  handleAddItem,
-  cartTotal,
-  produtos,
-}) => {
+function Home() {
+
   return (
     <>
-      <GlobalStyle />
+      <GlobalStyle  />
       <Header />
-        <Main
-        description={undefined}
-        total={cartTotal}  
-      />
-      <CartShopping
-        item={item}
-      />
+      <Main />
+      <CartShopping />
       <Footer />
     </>
   );
-};
+}
 
 export default Home;
