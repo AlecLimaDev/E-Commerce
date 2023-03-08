@@ -1,11 +1,12 @@
-import { FooterContainer, FooterText } from '../../styles/style'
+
 import React from 'react'
+import { FooterContainer, FooterText } from '../Footer/styles'
 const Footer: React.FC = () => {
     return (
         <>
             <FooterContainer>
                 <FooterText>
-                    EMPRESA XxX com todos os direitos reservados
+                    Mini Ecommerce com todos os direitos reservados
                 </FooterText>
             </FooterContainer>
         </>

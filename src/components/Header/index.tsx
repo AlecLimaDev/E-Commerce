@@ -4,17 +4,18 @@ import {
   SubLogo,
   ButtonContainerNavigation,
   NavigationButton,
-} from "../../styles/style";
+} from '../../components/Header/styles';
 
 import { FaCartPlus } from "react-icons/fa";
+import React from "react";
 
-const Header: React.FC = () => {
+const Header = () => {
   return (
     <>
       <Navigation>
         <Logo>
-          EMPRESA
-          <SubLogo>Anônima</SubLogo>
+          Mini
+          <SubLogo>Ecommerce</SubLogo>
         </Logo>
 
         <ButtonContainerNavigation>

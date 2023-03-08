@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable @next/next/no-img-element */
 
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 
 import {
   MainContainer,
@@ -11,14 +11,7 @@ import {
   PriceProducts,
   DescriptionProducts,
   BuyProducts,
-  AbaCart,
-  SelectedItems,
-  Price,
-  Items,
-  Button,
-  ButtonRemove,
-  ItemsTitle,
-} from "../../styles/style";
+} from '../Main/styles';
 
 import { FaCcVisa } from "react-icons/fa" 
 import { AiOutlineMinus, AiOutlinePlus, AiFillCloseCircle } from "react-icons/ai";
