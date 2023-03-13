@@ -16,15 +16,6 @@ import {
 import { FaCcVisa } from "react-icons/fa" 
 import { AiOutlineMinus, AiOutlinePlus, AiFillCloseCircle } from "react-icons/ai";
 
-interface MainProps {
-  map?: any;
-  url: string;
-  price: number;
-  category?: string;
-  name?: string;
-  qtd?: number;
-}
-
 interface ILoja {
   url?: string;
   id: number;
@@ -41,9 +32,9 @@ interface IShoppingCartItem {
 }
 
 const Loja: ILoja[] = [
-  { url: '/Applewatch.jpg', id: 1, title: "IPhone 14 Plus", price: 8745, name: "Apple Watch Series 6", category: "O Mundo no seu Pulso" },
-  { url: '/KitCamisas.jpg', id: 2, title: "", price: 220, name: "Kit de Camisetas básicas", category: "Para amantes de uma vestimenta mais Social" },
-  { url: '/AirJordan.jpg',  id: 3, title: "Apple Watch", price: 120.99, name: "AirJordan", category: "Avião nos pés" },
+  { url: '/Applewatch.jpg', id: 1, title: "IPhone 14 Plus", price: 8745, name: "Apple Watch Series 6", category: "O Apple Watch Series 6 tem resistência a 50 metros à água." },
+  { url: '/KitCamisas.jpg', id: 2, title: "", price: 220, name: "Kit de Camisetas básicas", category: "Para os apaixonados em um visual mais Clean e Sofisticado." },
+  { url: '/AirJordan.jpg',  id: 3, title: "Apple Watch", price: 120, name: "AirJordan", category: "Nike Air Jordan, o tênis que revolucionou o marketing esportivo." },
 ];
 
 
