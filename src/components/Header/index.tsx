@@ -92,10 +92,15 @@ const Header = () => {
     setShoppingCart(newShoppingCart);
   };
 
+  const restart = () => {
+    setShoppingCart([])
+  }
+
   const totalCart = shoppingCart.reduce((total, current) => {
     return total + current.product.price * current.quantity;
   }, 0);
 
+  
   const updateMenu = () => {
     if (!isMenuClicked) {
       setBurguerClass("burguer-bar clicked");
@@ -151,7 +156,7 @@ const Header = () => {
                   </button>
                 </ButtonPlus>
                 <div className="Price">R${totalCart}</div>
-                <div className="ButtonRemove">X</div>
+                <div className="ButtonRemove" onClick={restart}>X</div>
               </div>
             ))}
             <CheckoutContainer>
