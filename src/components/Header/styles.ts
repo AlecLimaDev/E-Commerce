@@ -1,8 +1,8 @@
-import { FunctionComponent } from "react";
+
 import styled from "styled-components";
-import { IHeaderProps } from "./types";
 
 export const Navigation = styled.nav`
+width: 100%;
   height: 75px;
   background: #0f52ba;
   display: flex;
@@ -37,6 +37,7 @@ export const NavigationButton = styled.button`
   background: none;
   border: none;
   height: 52px;
+
 
   h1 {
     color: white;
@@ -87,12 +88,23 @@ export const NavigationButton = styled.button`
   }
 
   .menu {
-    width: 50%;
+    width: 310px;
     height: 100vh;
     background-color: #0f52ba;
     position: absolute;
     top: 0;
     z-index: 1;
+
+    /* @media (max-width: 667px) {
+      width: 50%;
+    }
+
+    @media (max-width: 881px) {
+      width: 50%;
+    } */
+    
+
+
   }
 
   .hidden {
@@ -124,7 +136,7 @@ export const NavigationButton = styled.button`
   }
 
   .SelectedItems {
-    width: 300px;
+    width: 100%;
     margin-right: 310px;
     height: 95px;
     background-color: #ffffff;
@@ -137,7 +149,7 @@ export const NavigationButton = styled.button`
     flex: row wrap;
 
     @media (max-width: 593px) {
-      width: 95%;
+      width: 100%;
     }
   }
 
@@ -238,11 +250,14 @@ export const CheckoutContainer = styled.div`
   z-index: 4;
   display: flex;
   align-items: center;
-  margin-top: 13%;
+  margin-top: 25%;
+
+  
+  
 
   h1 {
     position: absolute;
-    left: 17%;
+    left: 33%;
     cursor: pointer;
   }
 `;
