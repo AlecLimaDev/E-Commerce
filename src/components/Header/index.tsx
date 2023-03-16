@@ -93,14 +93,13 @@ const Header = () => {
   };
 
   const restart = () => {
-    setShoppingCart([])
-  }
+    setShoppingCart([]);
+  };
 
   const totalCart = shoppingCart.reduce((total, current) => {
     return total + current.product.price * current.quantity;
   }, 0);
 
-  
   const updateMenu = () => {
     if (!isMenuClicked) {
       setBurguerClass("burguer-bar clicked");
@@ -140,7 +139,7 @@ const Header = () => {
                     className="ButtonMinus"
                     onClick={() => handleRemoveFromCart(book.id)}
                   >
-                    -
+                    --
                   </button>
                 </ButtonRemove>
                 {shoppingCart.map((item) => (
@@ -156,12 +155,14 @@ const Header = () => {
                   </button>
                 </ButtonPlus>
                 <div className="Price">R${totalCart}</div>
-                <div className="ButtonRemove" onClick={restart}>X</div>
+                <div className="ButtonRemove" onClick={restart}>
+                  X
+                </div>
               </div>
             ))}
-            <CheckoutContainer>
+            {/* <CheckoutContainer>
               <h1>Finalizar Compra</h1>
-            </CheckoutContainer>
+            </CheckoutContainer> */}
           </div>
         </NavigationButton>
       </ButtonContainerNavigation>

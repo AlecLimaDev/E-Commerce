@@ -95,6 +95,10 @@ export const NavigationButton = styled.button`
     top: 0;
     z-index: 1;
 
+    @media (max-width: 542px) {
+      width: 70%;
+    }
+
     /* @media (max-width: 667px) {
       width: 50%;
     }
@@ -136,21 +140,26 @@ export const NavigationButton = styled.button`
   }
 
   .SelectedItems {
-    width: 100%;
+    width: 99%;
     margin-right: 310px;
     height: 95px;
     background-color: #ffffff;
-    box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: -2px 2px 10px rgba(0, 0, 0, 1.15);
     border-radius: 8px;
-    margin-top: 75px;
+    margin-top: 55px;
     display: inline-flex;
     align-items: center;
     justify-content: space-evenly;
     flex: row wrap;
 
-    @media (max-width: 593px) {
-      width: 100%;
+    &:hover {
+      /* transform: scale(1.23); */
+      transform: translate(-20px, 12px);
     }
+
+    /* @media (max-width: 593px) {
+      width: 100%;
+    } */
   }
 
   .Items {
@@ -250,7 +259,8 @@ export const CheckoutContainer = styled.div`
   z-index: 4;
   display: flex;
   align-items: center;
-  margin-top: 25%;
+  margin-top: 100%;
+  z-index: 8;
 
   
   
